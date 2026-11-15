@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Minecraft run directory
+run/
+logs/
+crash-reports/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Compiled classes
+*.class
+
+# Generated media / local data
+videorecorder_clips/
+videorecorder_exports/
+videorecorder_imports/

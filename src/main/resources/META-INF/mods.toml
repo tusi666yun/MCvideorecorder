@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="tusi666yun"
+description='''A Minecraft Forge mod that records in-game video with optional game audio, plays MP4/M4A audio, and imports/exports video files. 一个可以在游戏内录制视频并播放的 Forge 模组。'''
+[[dependencies.${mod_id}]]
+modId="forge"
+mandatory=true
+versionRange="[${forge_version},)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.${mod_id}]]
+modId="minecraft"
+mandatory=true
+versionRange="[${minecraft_version}]"
+ordering="NONE"
+side="BOTH"

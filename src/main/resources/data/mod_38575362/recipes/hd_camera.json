@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "DGD",
+    "LCL",
+    "DED"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "C": {
+      "item": "mod_38575362:camera"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "item": "mod_38575362:hd_camera",
+    "count": 1
+  }
+}

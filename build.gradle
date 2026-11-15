@@ -1,0 +1,32 @@
+plugins { id 'java'; id 'net.minecraftforge.gradle' version '[6.0,6.2)' }
+version = '1.0.0-r35'
+group = 'cn.blockforge.generated.mod38575362'
+base { archivesName = 'mod_38575362' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+minecraft { mappings channel: 'official', version: '1.20.1' }
+repositories { mavenCentral() }
+configurations {
+    shade
+    implementation.extendsFrom(shade)
+}
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.0'
+    // 录像/导出/导入用纯 Java 直接编解码 MP4（jcodec）；只把这两个库打进最终 jar
+    shade 'org.jcodec:jcodec:0.2.5'
+    shade 'org.jcodec:jcodec-javase:0.2.5'
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+processResources {
+    def props = [mod_id: 'mod_38575362', mod_name: '游戏录像机', mod_version: project.version,
+                 minecraft_version: '1.20.1', forge_version: '47.4.0']
+    inputs.properties props
+    filteringCharset = 'UTF-8'
+    filesMatching('META-INF/mods.toml') { expand props }
+}
+jar {
+    from {
+        configurations.shade.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+jar.finalizedBy('reobfJar')

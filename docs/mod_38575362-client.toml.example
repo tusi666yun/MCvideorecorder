@@ -1,0 +1,16 @@
+# 游戏录像机客户端配置（放在 .minecraft/config/mod_38575362-client.toml）
+# 首次启动模组后也会自动生成。
+
+[recording.standard]
+	# 标清摄像机
+	width = 320
+	height = 180
+	fps = 15
+	jpegQuality = 0.85
+
+[recording.hd]
+	# 高清摄像机（不要超过 1280×720）
+	width = 854
+	height = 480
+	fps = 24
+	jpegQuality = 0.92
