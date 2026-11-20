@@ -1,5 +1,7 @@
 # MC Video Recorder
 
+作者：yun
+
 一个面向 Minecraft Forge 1.20.1 的游戏内录像模组：用摄像机录制画面和游戏音效，生成 MP4 视频；也可以把外部视频导入游戏，在显示屏或录像记录器上播放。
 
 An in-game video recorder for Minecraft Forge 1.20.1. Record gameplay with sound, play MP4/M4A audio, and import or export videos without leaving the game.
